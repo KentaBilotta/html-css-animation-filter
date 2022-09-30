@@ -57,12 +57,12 @@
 }
 
 .ex-5-square:hover{
-    padding: 80px;
-    padding: -80px;
+    transform: scale(2);
 }
 
 .ex-5-square:active{
     cursor: pointer;
+    transform: scale(0.5);
 }
 
 .ex-6-img, .ex-7-img, .ex-8-img {
@@ -106,13 +106,13 @@
 .ex-9-img:hover{
     filter: invert(1) hue-rotate(260deg);
     border-radius: 20%;
-    width: calc(400px + 20%);
+    transform: scale(1.5);
 }
 
 /* svolgimento esercizio 10 */
 .ex-10-icon {
     font-size: 60px;
-    animation: rotazione-continua 1s infinite;
+    animation: rotazione-continua 1.5s linear infinite;
 }
 
 @keyframes rotazione-continua {
@@ -128,11 +128,10 @@
 /* svolgimento esercizio 11 */
 .ex-11-icon {
     font-size: 60px;
-    animation: rotazione-continua 1s infinite;
 }
 
 .ex-11-icon:hover{
-    animation: rotazione-continua-reverse 1s infinite;
+    animation: rotazione-continua-reverse 1s;
 }
 
 @keyframes rotazione-continua-reverse {
@@ -140,8 +139,12 @@
         transform: rotate(0deg);
     }
 
-    100%{
+    75%{
         transform: rotate(270deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
     }
 }
 
@@ -177,8 +180,8 @@
 }
 
 /* svolgimento esercizio 12 */
-.ex-12-top-white{
-    animation: sposta-bianco-sopra 3s linear infinite;
+.ex-12-button:hover .ex-12-top-white{
+    animation: sposta-bianco-sopra 2s linear;
 }
 @keyframes sposta-bianco-sopra {
     
@@ -197,8 +200,8 @@
 
 }
 
-.ex-12-bottom-white{
-    animation: sposta-bianco-sotto 3s linear infinite;
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: sposta-bianco-sotto 2s linear;
 }
 @keyframes sposta-bianco-sotto {
     
@@ -218,64 +221,67 @@
 }
 
 /* svolgimento eserzio 13 */
-.ex-13-top-white{
-    top: -10px;
-    left: -30px;
-    animation: ruota-bianco-sopra 5s linear infinite;
+.ex-13-button:hover .ex-13-top-white{
+    animation: ruota-bianco-sopra 3s linear;
 }
 @keyframes ruota-bianco-sopra {
     
     0%{
         top: -10px;
-        left: -30px
+        left: 10%;
     }
     25%{
         top: -10px;
-        left: calc(200px - 30px);
+        left: calc(100% - 30px);
     }
     50%{
-        top: calc(70px - 10px);
-        left: calc(200px - 30px);
+        top: calc(100% - 10px);
+        left: calc(100% - 30px);
     }
     75%{
-        top: calc(70px - 10px);
-        left: -30px;
+        top: calc(100% - 10px);
+        left: calc(0% - 30px);
+    }
+    90%{
+        top: -10px;
+        left: calc(0% - 30px);
     }
     100%{
         top: -10px;
-        left: -30px;
-    }    
-
+        left: 10%;
+    }
 }
 
-.ex-13-bottom-white{
-    bottom: -10px;
-    right: -30px;
-    animation: ruota-bianco-sotto 5s linear infinite;
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: ruota-bianco-sotto 3s linear;
 }
 
 @keyframes ruota-bianco-sotto {
 
     0%{
         bottom: -10px;
-        right: -30px;
+        right: 20%;
     }
     25%{
         bottom: -10px;
-        right: calc(200px - 30px);
+        right: calc(100% - 30px);
     }
     50%{
-        bottom: calc(70px - 10px);
-        right: calc(200px - 30px);
+        bottom: calc(100% - 10px);
+        right: calc(100% - 30px);
     }
     75%{
-        bottom: calc(70px - 10px);
-        right: -30px;
+        bottom: calc(100% - 10px);
+        right: calc(0% - 30px);
+    }
+    90%{
+        bottom: calc(0% - 10px);
+        right: calc(0% - 30px);
     }
     100%{
         bottom: -10px;
-        right: -30px
-    }  
-
+        right: 20%;
+    }
+    
 }
 
